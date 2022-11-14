@@ -1,0 +1,28 @@
+Initialisation:
+
+Load configs
+initiate world
+initiate ui
+
+
+update:
+
+remove one frame components
+user input
+spawn
+weapons
+moving
+physics
+damage check
+abilities
+damage apply
+destroy
+abilities spawn
+vfx
+sfx
+ui
+
+
+
+
+
