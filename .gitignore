@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+AsterDOTS/Library/
+AsterDOTS/Logs/
+AsterDOTS/Temp/
+AsterDOTS/UserSettings/
