@@ -24,7 +24,9 @@ namespace Update.InputToMovementConverters.Alien
                 .WithNone<CInputListener>()
                 .ForEach((ref CBulletShotRequest request) =>
                 {
-                    if (random.ValueRW.Random.NextBool() && !request.IsActive && !request.InProgress)
+                    if (random.ValueRW.Random.NextFloat() < 0.1f 
+                        && !request.IsActive 
+                        && !request.InProgress)
                     {
                         request.IsActive = true;
                     }
