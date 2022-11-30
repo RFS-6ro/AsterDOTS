@@ -5,12 +5,12 @@
 
 using Core.ECS.Tags.Damageable;
 using Unity.Entities;
-using Update.Movement.Rotation;
+using Update.Spawners.Asteroids;
 
 namespace Update.Destroy
 {
     [RequireMatchingQueriesForUpdate]
-    [UpdateAfter(typeof(SEntityRotateByAngle))]
+    [UpdateAfter(typeof(SCreatingSmallerAsteroidPartsOnDeathEvent))]
     public partial class SDeath : SystemBase
     {
         protected override void OnUpdate()

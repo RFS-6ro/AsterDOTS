@@ -5,7 +5,6 @@
 
 using Core.ECS.Tags.Weapon;
 using Unity.Entities;
-using Update.InputToMovementConverters.Alien;
 using Update.PowerUps.Shooting.BulletBulletShootingDelayChange;
 using Update.Spawners.Bullets;
 using Update.Weapons.Stats;

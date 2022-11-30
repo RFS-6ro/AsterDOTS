@@ -15,6 +15,8 @@ using Update.Movement.Acceleration;
 using Update.Movement.InstantTransformChanger;
 using Update.Movement.Position;
 using Update.Movement.Rotation;
+using Update.PowerUps.InvulnerableShield;
+using Update.PowerUps.Shooting.BulletSpeedChange;
 using Update.Spawners.Aliens;
 using Update.Spawners.Asteroids;
 using Update.Spawners.Bullets;
@@ -27,68 +29,50 @@ namespace Asteroids
 {
     public class PRIORITY
     {
-        private List<SystemBase> _systems = new List<SystemBase>();
-        
         public PRIORITY()
         {
-            _systems.Add(new SInitialPlayerSpawner());
-            _systems.Add(new SAsteroidsSpawner());
-            _systems.Add(new SAlienSpawner());
-            
-            _systems.Add(new SUnitSpawner());
-            
-            _systems.Add(new SPlayerInitializer());
-            _systems.Add(new SAsteroidInitializer());
-            _systems.Add(new SAliensInitializer());
-            
-            _systems.Add(null);
-            
-            _systems.Add(new SReadKeyboardInput());
-            _systems.Add(new SApplyKeyboardMoveInput());
-            _systems.Add(new SApplyKeyboardShootInput());
-            
-            _systems.Add(null);
-            _systems.Add(new SApplyAlienAIToMovement());
-            _systems.Add(null);
-            
-            _systems.Add(new SUpdateBulletDelay());
-            _systems.Add(null);
-            _systems.Add(new SBulletsSpawner());
-            _systems.Add(new SBulletInitializer());
-            
-            _systems.Add(null);
-            _systems.Add(new SShootingFXListener());
-            
-            _systems.Add(null);
-            _systems.Add(new STransformInstantChanger());
-            _systems.Add(null);
-            _systems.Add(new SEntityMoveInDirection());
-            _systems.Add(new SEngineAcceleration());
-            _systems.Add(new SEntityRotateByAngle());
-            
-            _systems.Add(null);
-            _systems.Add(new SEngineFXListener());
-            _systems.Add(null);
-            // _systems.Add(new SCollisionListener());
-            _systems.Add(null);
-            // _systems.Add(new SDamageCalculator());
-            _systems.Add(null);
-            // _systems.Add(new SDamageApplier());
-            _systems.Add(null);
-            _systems.Add(new SAsteroidDestroyFXListener());
-            _systems.Add(new SShipExplosionFXListener());
-            _systems.Add(null);
-            _systems.Add(new SDeath());
-            _systems.Add(null);
-            _systems.Add(null);
-            _systems.Add(new SPowerUpSpawner());
-            _systems.Add(new SPowerUpInitializer());
-            _systems.Add(null);
-            _systems.Add(new SSFXPlayer());
-            _systems.Add(new SVFXPlayer());
-            _systems.Add(null);
-            _systems.Add(new SRemoveOneFrameComponents());
-            _systems.Add(null);
+            /*
+             SInitialPlayerSpawner
+             SAsteroidsSpawner
+             SAlienSpawner
+             SUnitSpawner
+             SPlayerInitializer
+             SAsteroidInitializer
+             
+             SAliensInitializer
+             SReadKeyboardInput
+             SApplyKeyboardMoveInput
+             SApplyKeyboardShootInput
+             SApplyAlienAIToMovement
+             SApplyAlienAIToShoot
+             SBulletShootingDelayChange
+             SUpdateBulletDelay
+             SBulletsSpawner 
+             
+             SBulletInitializer
+             SShootingFXListener SBulletSpeedChangeApply STransformInstantChanger
+             SEntityMoveInDirection
+             SEntityRotateByAngle SEngineAcceleration
+             
+             SEngineFXListener
+             
+             SCollisionListener
+             SReadCollisionData
+             SProcessBoundaryCollisions
+             SProcessPowerUpsPickUp
+             SProcessDamageAfterCollision
+             
+             SDamageApplier
+             SPowerUpSpawner
+             SPowerUpInitializer
+             SInvulnerableShield
+             
+             SEntityRotateByAngle
+             SCreatingSmallerAsteroidPartsOnDeathEvent
+             SAsteroidDestroyFXListener SShipExplosionFXListener
+             SDeath
+             SSFXPlayer SVFXPlayer SRemoveOneFrameComponents
+             */
         }
     }
 }

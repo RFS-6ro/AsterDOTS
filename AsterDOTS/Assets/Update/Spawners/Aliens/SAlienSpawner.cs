@@ -9,7 +9,6 @@ using Core.ECS.Tags.AlienShip;
 using Core.Utils;
 using Initialization.Configs;
 using Initialization.Configs.AlienShipSpawnRate;
-using Initialization.Configs.Boundary;
 using Initialization.Configs.EventSystem;
 using Initialization.Configs.SpawnPoints;
 using Unity.Entities;

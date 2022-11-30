@@ -6,12 +6,12 @@
 using Core.ECS.Tags.Damageable;
 using Unity.Entities;
 using Update.Damage;
+using Update.Spawners.Unit.Initializers;
 
 namespace Update.PowerUps.InvulnerableShield
 {
     [RequireMatchingQueriesForUpdate]
-    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
-    [UpdateBefore(typeof(SDamageApplier))]
+    [UpdateBefore(typeof(SPowerUpInitializer))]
     public partial class SInvulnerableShield : SystemBase
     {
         protected override void OnUpdate()

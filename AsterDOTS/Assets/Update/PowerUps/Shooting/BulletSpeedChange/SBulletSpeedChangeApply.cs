@@ -3,7 +3,6 @@
 // Copyright (c) 2022-2022 RFS_6ro <rfs6ro@gmail.com>
 // ----------------------------------------------------------------------------
 
-using Core.ECS.Tags.Bullet;
 using Core.ECS.Tags.Weapon;
 using Initialization.Configs;
 using Initialization.Configs.BulletMove;

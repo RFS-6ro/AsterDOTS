@@ -9,7 +9,6 @@ using Core.ECS.Tags.Asteroid;
 using Core.Utils;
 using Initialization.Configs;
 using Initialization.Configs.AsteroidsSpawnRate;
-using Initialization.Configs.Boundary;
 using Initialization.Configs.EventSystem;
 using Initialization.Configs.SpawnPoints;
 using Initialization.WorldCreation;
