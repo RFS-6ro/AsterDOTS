@@ -9,6 +9,7 @@ namespace Initialization.Configs.BulletMove
 {
     public struct CBulletMoveConfig : IComponentData
     {
-        public float BulletSpeed;
+        public float EnemyBulletSpeed;
+        public float PlayerBulletSpeed;
     }
 }

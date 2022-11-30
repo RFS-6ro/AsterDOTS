@@ -9,7 +9,10 @@ namespace Initialization.Configs.BulletMove
 {
     public class CBulletMoveConfigAuthoring : MonoBehaviour
     {
-        [SerializeField] private float _bulletSpeed                 = 30;
-        public float BulletSpeed                => _bulletSpeed;
+        [SerializeField] private float _enemyBulletSpeed = 17;
+        [SerializeField] private float _playerBulletSpeed = 17;
+        
+        public float EnemyBulletSpeed => _enemyBulletSpeed;
+        public float PlayerBulletSpeed => _playerBulletSpeed;
     }
 }

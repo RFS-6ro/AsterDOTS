@@ -17,7 +17,9 @@ namespace Initialization.Configs
         Weapon = 7,
         PlayerBullet = 8,
         EnemyBullet = 9,
-        PowerUpPlaceholder = 10,
-        Boundary = 11
+        InvulnerableShield = 10,
+        BulletSpeedIncrease = 11,
+        BulletShootingDelayDecrease = 12,
+        Boundary = 13
     }
 }

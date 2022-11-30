@@ -19,7 +19,9 @@ namespace Initialization.Configs.EntityPrefabs
         [SerializeField] private GameObject _weaponPrefab;
         [SerializeField] private GameObject _playerBullet;
         [SerializeField] private GameObject _enemyBullet;
-        [SerializeField] private GameObject _powerUpPlaceholderPrefab;
+        [SerializeField] private GameObject _invulnerableShieldPrefab;
+        [SerializeField] private GameObject _bulletSpeedIncreasePrefab;
+        [SerializeField] private GameObject _bulletShootingDelayDecreasePrefab;
         
         public GameObject PlayerShipPrefab         => _playerShipPrefab;
         public GameObject AlienShipSmallPrefab     => _alienShipSmallPrefab;
@@ -30,6 +32,8 @@ namespace Initialization.Configs.EntityPrefabs
         public GameObject WeaponPrefab             => _weaponPrefab;
         public GameObject PlayerBullet             => _playerBullet;
         public GameObject EnemyBullet              => _enemyBullet;
-        public GameObject PowerUpPlaceholderPrefab => _powerUpPlaceholderPrefab;
+        public GameObject InvulnerableShieldPrefab => _invulnerableShieldPrefab;
+        public GameObject BulletSpeedIncreasePrefab => _bulletSpeedIncreasePrefab;
+        public GameObject BulletShootingDelayDecreasePrefab => _bulletShootingDelayDecreasePrefab;
     }
 }

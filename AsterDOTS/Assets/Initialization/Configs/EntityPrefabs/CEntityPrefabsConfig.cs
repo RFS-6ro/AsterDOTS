@@ -18,6 +18,8 @@ namespace Initialization.Configs.EntityPrefabs
         public Entity WeaponPrefab;
         public Entity PlayerBullet;
         public Entity EnemyBullet;
-        public Entity PowerUpPlaceholderPrefab;
+        public Entity InvulnerableShieldPrefab;
+        public Entity BulletSpeedIncreasePrefab;
+        public Entity BulletShootingDelayDecrease;
     }
 }

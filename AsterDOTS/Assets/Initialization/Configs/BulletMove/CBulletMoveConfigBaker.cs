@@ -13,7 +13,8 @@ namespace Initialization.Configs.BulletMove
         {
             AddComponent(new CBulletMoveConfig
             {
-                BulletSpeed = auth.BulletSpeed,
+                EnemyBulletSpeed = auth.EnemyBulletSpeed,
+                PlayerBulletSpeed = auth.PlayerBulletSpeed,
             });
         }
     }
