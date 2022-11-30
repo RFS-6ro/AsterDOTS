@@ -11,6 +11,7 @@ using Initialization.Configs.AsteroidsMove;
 using Initialization.Configs.AsteroidsSpawnRate;
 using Initialization.Configs.EntityPrefabs;
 using Unity.Entities;
+using Update.PowerUps;
 
 namespace Core.Utils
 {
@@ -29,7 +30,9 @@ namespace Core.Utils
                 case EntityType.Weapon: return link.WeaponPrefab;
                 case EntityType.PlayerBullet: return link.PlayerBullet;
                 case EntityType.EnemyBullet: return link.EnemyBullet;
-                case EntityType.PowerUpPlaceholder: return link.PowerUpPlaceholderPrefab;
+                case EntityType.InvulnerableShield: return link.InvulnerableShieldPrefab;
+                case EntityType.BulletSpeedIncrease: return link.BulletSpeedIncreasePrefab;
+                case EntityType.BulletShootingDelayDecrease: return link.BulletShootingDelayDecrease;
                 default: throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
         }

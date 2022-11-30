@@ -22,7 +22,9 @@ namespace Initialization.Configs.EntityPrefabs
                 WeaponPrefab             = GetEntity(auth.WeaponPrefab), 
                 PlayerBullet             = GetEntity(auth.PlayerBullet),
                 EnemyBullet              = GetEntity(auth.EnemyBullet),
-                PowerUpPlaceholderPrefab = GetEntity(auth.PowerUpPlaceholderPrefab)
+                InvulnerableShieldPrefab = GetEntity(auth.InvulnerableShieldPrefab),
+                BulletSpeedIncreasePrefab = GetEntity(auth.BulletSpeedIncreasePrefab),
+                BulletShootingDelayDecrease = GetEntity(auth.BulletShootingDelayDecreasePrefab),
             });
         }
     }

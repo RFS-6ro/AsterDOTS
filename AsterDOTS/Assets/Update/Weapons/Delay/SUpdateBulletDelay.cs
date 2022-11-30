@@ -5,14 +5,14 @@
 
 using Core.ECS.Tags.Weapon;
 using Unity.Entities;
-using Update.InputToMovementConverters.Alien;
+using Update.PowerUps.Shooting.BulletBulletShootingDelayChange;
 using Update.Spawners.Bullets;
 using Update.Weapons.Stats;
 
 namespace Update.Weapons.Delay
 {
     [RequireMatchingQueriesForUpdate]
-    [UpdateAfter(typeof(SApplyAlienAIToMovement))]
+    [UpdateAfter(typeof(SBulletShootingDelayChange))]
     public partial class SUpdateBulletDelay : SystemBase
     {
         protected override void OnUpdate()

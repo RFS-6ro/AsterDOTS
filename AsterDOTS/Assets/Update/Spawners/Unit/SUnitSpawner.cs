@@ -56,7 +56,7 @@ namespace Update.Spawners.Unit
                         {
                             Vector = moveDirection
                         });
-                        
+
                         entityCommandBuffer.AddComponent(unit, new CChangeTransformRequest()
                         {
                             Position = position,

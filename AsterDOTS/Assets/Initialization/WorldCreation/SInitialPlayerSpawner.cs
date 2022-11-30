@@ -8,6 +8,7 @@ using Core.Utils;
 using Initialization.Configs;
 using Initialization.Configs.EventSystem;
 using Unity.Entities;
+using Unity.Mathematics;
 using Update.Spawners.Unit;
 
 namespace Initialization.WorldCreation
@@ -27,7 +28,7 @@ namespace Initialization.WorldCreation
             
             CUnitSpawnRequest request = 
                 new SpawnRequestBuilder(1)
-                    .AddUnit(EntityType.PlayerShip)
+                    .AddUnit(EntityType.PlayerShip, new float3(1000f, 0f, 1000f))
                     .Build();
             
             CEventSystemConfig eventSystemConfig = SystemAPI.GetSingleton<CEventSystemConfig>();

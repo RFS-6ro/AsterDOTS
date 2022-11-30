@@ -5,7 +5,7 @@
 
 using Core.ECS.Tags.Damageable;
 using Unity.Entities;
-using Update.Collision;
+using Update.Collision.Processors;
 using Update.Destroy;
 using Update.Health;
 
@@ -13,7 +13,7 @@ namespace Update.Damage
 {
     [RequireMatchingQueriesForUpdate]
     [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
-    [UpdateAfter(typeof(SCollisionListener))]
+    [UpdateAfter(typeof(SProcessDamageAfterCollision))]
     public partial class SDamageApplier : SystemBase
     {
         protected override void OnUpdate()

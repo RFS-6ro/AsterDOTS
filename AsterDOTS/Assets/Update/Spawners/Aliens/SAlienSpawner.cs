@@ -9,8 +9,8 @@ using Core.ECS.Tags.AlienShip;
 using Core.Utils;
 using Initialization.Configs;
 using Initialization.Configs.AlienShipSpawnRate;
-using Initialization.Configs.Boundary;
 using Initialization.Configs.EventSystem;
+using Initialization.Configs.SpawnPoints;
 using Unity.Entities;
 using Unity.Mathematics;
 using Update.Spawners.Asteroids;
@@ -27,7 +27,7 @@ namespace Update.Spawners.Aliens
         protected override void OnUpdate()
         {
             CAlienShipSpawnRateConfig spawnRateConfig = SystemAPI.GetSingleton<CAlienShipSpawnRateConfig>();
-            CBoundaryConfig boundaryConfig = SystemAPI.GetSingleton<CBoundaryConfig>();
+            CSpawnPointsConfig spawnPointsConfig = SystemAPI.GetSingleton<CSpawnPointsConfig>();
             EntityQuery alienShipQuery = EntityManager.CreateEntityQuery(typeof(CAlienShip));
 
             int entities = alienShipQuery.CalculateEntityCount();
@@ -53,7 +53,7 @@ namespace Update.Spawners.Aliens
             {
                 for (int i = 0; i < spawnRateConfig.GetAlienShipSceneBufferCount(type); i++)
                 {
-                    (float3 position, float3 forward) transform = boundaryConfig.GetRandomBoundaryTransform(random);
+                    (float3 position, float3 forward) transform = spawnPointsConfig.GetRandomSpawnPoint(random);
 
                     builder.AddUnit(type, transform.position, transform.forward);
                 }

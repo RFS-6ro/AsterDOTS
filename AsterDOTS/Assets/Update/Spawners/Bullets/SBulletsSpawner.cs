@@ -9,6 +9,7 @@ using Core.Utils;
 using Initialization.Configs.EventSystem;
 using Unity.Entities;
 using Unity.Transforms;
+using Update.InputToMovementConverters.Alien;
 using Update.InputToMovementConverters.Player;
 using Update.Spawners.Unit;
 using Update.Weapons.Delay;
@@ -17,6 +18,8 @@ namespace Update.Spawners.Bullets
 {
     [RequireMatchingQueriesForUpdate]
     [UpdateAfter(typeof(SApplyKeyboardShootInput))]
+    [UpdateAfter(typeof(SApplyAlienAIToShoot))]
+    [UpdateAfter(typeof(SUpdateBulletDelay))]
     public partial class SBulletsSpawner : SystemBase
     {
         protected override void OnUpdate()
