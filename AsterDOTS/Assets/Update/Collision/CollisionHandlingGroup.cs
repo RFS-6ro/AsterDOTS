@@ -4,12 +4,14 @@
 // ----------------------------------------------------------------------------
 
 using Unity.Entities;
-using Unity.Mathematics;
+using Unity.Physics.Systems;
 
-namespace Update.Spawners.PowerUp
+namespace Update.Collision
 {
-    public struct CPowerUpInitializationData : IComponentData
+    [UpdateAfter(typeof(PhysicsSystemGroup))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
+    public class CollisionHandlingGroup : ComponentSystemGroup
     {
-        public float3 Position;
+        
     }
 }

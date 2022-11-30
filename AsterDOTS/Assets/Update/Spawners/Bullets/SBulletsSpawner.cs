@@ -3,6 +3,7 @@
 // Copyright (c) 2022-2022 RFS_6ro <rfs6ro@gmail.com>
 // ----------------------------------------------------------------------------
 
+using System;
 using Core.ECS.OneFrame;
 using Core.ECS.Tags.Weapon;
 using Core.Utils;

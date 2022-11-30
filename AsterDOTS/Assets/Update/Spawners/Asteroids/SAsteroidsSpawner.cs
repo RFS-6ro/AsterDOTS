@@ -11,6 +11,7 @@ using Initialization.Configs;
 using Initialization.Configs.AsteroidsSpawnRate;
 using Initialization.Configs.Boundary;
 using Initialization.Configs.EventSystem;
+using Initialization.Configs.SpawnPoints;
 using Initialization.WorldCreation;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -27,7 +28,7 @@ namespace Update.Spawners.Asteroids
         protected override void OnUpdate()
         {
             CAsteroidsSpawnRateConfig spawnRateConfig = SystemAPI.GetSingleton<CAsteroidsSpawnRateConfig>();
-            CBoundaryConfig boundaryConfig = SystemAPI.GetSingleton<CBoundaryConfig>();
+            CSpawnPointsConfig spawnPointsConfig = SystemAPI.GetSingleton<CSpawnPointsConfig>();
             EntityQuery asteroidsQuery = EntityManager.CreateEntityQuery(typeof(CAsteroid));
 
             int entities = asteroidsQuery.CalculateEntityCount();
@@ -54,7 +55,7 @@ namespace Update.Spawners.Asteroids
             {
                 for (int i = 0; i < spawnRateConfig.GetAsteroidSceneBufferCount(type); i++)
                 {
-                    (float3 position, float3 forward) transform = boundaryConfig.GetRandomBoundaryTransform(random);
+                    (float3 position, float3 forward) transform = spawnPointsConfig.GetRandomSpawnPoint(random);
 
                     builder.AddUnit(type, transform.position, transform.forward);
                 }

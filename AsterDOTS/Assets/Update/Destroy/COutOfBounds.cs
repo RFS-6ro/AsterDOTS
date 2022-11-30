@@ -4,12 +4,8 @@
 // ----------------------------------------------------------------------------
 
 using Unity.Entities;
-using Unity.Mathematics;
 
-namespace Update.Spawners.PowerUp
+namespace Update.Destroy
 {
-    public struct CPowerUpSpawnRequest : IComponentData
-    {
-        public float3 Position;
-    }
+    public struct COutOfBounds : IComponentData { }
 }

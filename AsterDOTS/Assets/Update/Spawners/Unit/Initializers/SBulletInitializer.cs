@@ -5,9 +5,11 @@
 
 using Core.ECS.Tags.Bullet;
 using Core.ECS.Tags.Initialize;
+using Initialization.Configs;
 using Initialization.Configs.BulletMove;
 using Initialization.Configs.PlayerMovement;
 using Unity.Entities;
+using Update.PowerUps.Shooting.BulletSpeedChange;
 
 namespace Update.Spawners.Unit.Initializers
 {
@@ -30,7 +32,16 @@ namespace Update.Spawners.Unit.Initializers
                 {
                     entityCommandBuffer.AddComponent(entity, new CEntitySpeed
                     {
-                        SpeedMultiplier = entityMoveConfig.BulletSpeed
+                        SpeedMultiplier = 
+                            data.UnitType == EntityType.EnemyBullet 
+                                ? entityMoveConfig.EnemyBulletSpeed
+                                : entityMoveConfig.PlayerBulletSpeed
+                    });
+                    
+                    entityCommandBuffer.AddComponent(entity, new CBulletSpeedChange
+                    {
+                        TargetBullets = data.UnitType,
+                        Multiplier = 1f
                     });
 
                     entityCommandBuffer.RemoveComponent<CNeedInitialize>(entity);
